@@ -1,6 +1,5 @@
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:device_utilities/src/device_utilities_io.dart'
-    if (dart.library.html) 'device_utilities_web.dart'
+import 'package:device_utilities/src/device_utilities_io.dart' if (dart.library.html) 'device_utilities_web.dart'
     as device_utilities;
 import 'package:flutter/services.dart' as services;
 import 'package:package_info_plus/package_info_plus.dart';

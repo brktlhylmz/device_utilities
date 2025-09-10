@@ -25,9 +25,7 @@ final class _DeviceUtilitiesWeb extends DeviceUtilities {
     platformVersion = info.appVersion;
     deviceModel = info.platform;
     deviceBrand = info.vendor;
-    deviceId = info.userAgent;
     deviceTimeZone = DateTime.now().timeZoneOffset.inHours;
     deviceType = 'web';
-
   }
 }

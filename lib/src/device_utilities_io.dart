@@ -39,6 +39,22 @@ final class _DeviceUtilitiesIo extends DeviceUtilities {
       deviceBrand = info.name;
       deviceId = info.identifierForVendor;
     }
+    if (Platform.isMacOS) {
+      final info = await device.macOsInfo;
+      platformVersion = info.osRelease;
+      deviceModel = info.model;
+      deviceName = info.computerName;
+      deviceBrand = 'Apple';
+      deviceId = info.systemGUID;
+    }
+    if (Platform.isWindows) {
+      final info = await device.windowsInfo;
+      platformVersion = info.releaseId;
+      deviceModel = info.computerName;
+      deviceName = info.computerName;
+      deviceBrand = 'Microsoft';
+      deviceId = info.deviceId;
+    }
   }
 
   String _deviceType() {
